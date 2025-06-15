@@ -355,4 +355,126 @@ body {
     z-index: 1000 !important;
     transition: none !important;
     transform: none !important;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .chess-board {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        min-height: 0;
+        max-width: 600px;
+    }
+
+    .side-panel {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+    }
+
+    .captured-bar {
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        padding: 12px;
+        margin-right: 0;
+    }
+
+    .white-captured, .black-captured {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 16px 12px;
+        gap: 16px;
+    }
+
+    .chess-board {
+        max-width: 100%;
+    }
+
+    .game-controls {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .control-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .move-history {
+        max-height: 200px;
+    }
+
+    .status {
+        font-size: 18px;
+    }
+
+    #movesList {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        padding: 24px;
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chess-board {
+        border-width: 2px;
+    }
+
+    .control-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .move-history h3 {
+        font-size: 16px;
+    }
+
+    #movesList td {
+        padding: 2px 6px 2px 0;
+        font-size: 13px;
+    }
+
+    .captured-pieces {
+        padding: 8px 12px;
+    }
+
+    .white-captured, .black-captured {
+        font-size: 20px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) {
+    .control-btn:hover {
+        transform: none;
+    }
+
+    .piece:hover {
+        transform: none;
+    }
+
+    .control-btn:active {
+        transform: scale(0.98);
+    }
 } 
